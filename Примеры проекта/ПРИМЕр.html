@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8" />
+    <title>Server_app.COM</title>
+</head>
+<body>
+<form method="POST" action="/">
+    {% csrf_token %}
+
+    <BUTTON type="submit" value="filter" name="filter" >Найти</button>
+    <input name="filter" type="text">
+
+
+    <h1>{{ massage }}</h1>
+    <p>Введите имя......
+    <input name="name" type="text">
+     <p>Введите возраст
+    <input name="age" type="number">
+     <p>Введите пол
+    <select name="gender">
+        <option>Мужскйой</option>
+        <option>Женский</option>
+        <p>http://127.0.0.1:8000/info/</p>
+    </select>
+    <p>
+    <button type="submit" value="send" name="but">Добавить в базу</button>
+    <p>
+    <button type="submit" value="delete" name="delete" >delete</button>
+    <h1>{{ BD }}</h1>
+
+
+
+
+
+</form>
+
+<table border="1" width="50%">
+    {% autoescape off %}
+    {{table}}
+    {% endautoescape %}
+</table>
+
+
+<h2>СЕРВАК</h2>
+<a href="http://127.0.0.1:8000/info/">БАза Данный</a>
+<h2></h2>
+<a href="http://127.0.0.1:8000/index/">Калькулятор</a>
+</body>
+</html>

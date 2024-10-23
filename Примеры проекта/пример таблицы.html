@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="utf-8" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>DATA_BASE</title>
+</head>
+<body>
+{% csrf_token %}
+<table border="1" width="50%">
+      {% autoescape off %}
+    {{table}}
+    {% endautoescape %}
+    <form method="POST" action="/info/">
+        {% csrf_token %}
+
+        <button type="submit" value="send" name="knopka">Кнопка</button>
+    </form>
+    <p>
+
+</table>
+<p></p>
+ <a href="http://127.0.0.1:8000/">назад</a>
+</body>
+</html>

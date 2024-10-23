@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ОХАЁ
+    <meta charset="UTF-8">
+    <title>Visual_Baza</title>
+</head>
+<body>
+<table border="1" width="50%">
+      {% autoescape off %}
+    {{table}}
+    {% endautoescape %}
+
+<form method="POST" action="/">
+    {{chek}}
+    {% csrf_token %}
+    {% if chek != 1 %}
+
+    <button type="submit" value="0" name="имя" >Ввод</button>
+
+    <p>id </p>
+    <input name="name" type="text">
+    <p>content_type_id</p>
+    <input name="lname" type="text">
+    <p>codename</p>
+    <input name="работа" type="text">
+    <p>name</p>
+    <input name="зарплата" type="text">
+    <h1>{{sms}}</h1>
+    <h1>{{ username }}</h1>
+    <h1>{{ roll }}</h1>
+{% endif %}
+    <button type="submit" value="logout" name="logout" >выйти</button>
+</form>
+</table>
+</body>
+</html>
